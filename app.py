@@ -23,18 +23,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# En local
-if st.secrets.get("postgres"):
-    DB_CONFIG = {
-        'dbname': st.secrets["postgres"]["database"],
-        'user': st.secrets["postgres"]["user"],
-        'password': st.secrets["postgres"]["password"],
-        'host': st.secrets["postgres"]["host"],
-        'port': st.secrets["postgres"]["port"]
-    }
-else:
-    # Fallback pour développement local
-    DB_CONFIG = {
+DB_CONFIG = {
         'dbname': 'examens_db',
         'user': 'postgres',
         'password': '5432',
