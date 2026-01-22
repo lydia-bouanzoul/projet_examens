@@ -266,7 +266,7 @@ class ExamScheduler:
         
         print(f"\n {scheduled}/{len(modules)} examens planifiés avec succès")
         if self.conflicts:
-            print(f" {len(self.conflicts)} modules non planifiés")
+            print(f" {len(self.conflicts)} modules")
         
         return scheduled, self.conflicts
     

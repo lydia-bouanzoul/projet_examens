@@ -5,7 +5,6 @@ from datetime import datetime, timedelta
 
 fake = Faker('fr_FR')
 
-# Configuration de la connexion
 DB_CONFIG = {
     'dbname': 'examens_db',
     'user': 'postgres',
@@ -248,7 +247,7 @@ def main():
         print("\n=== GÉNÉRATION TERMINÉE AVEC SUCCÈS ===")
         
     except Exception as e:
-        print(f"\n❌ Erreur: {e}")
+        print(f"\nErreur: {e}")
 
 if __name__ == "__main__":
     main()

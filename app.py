@@ -510,7 +510,7 @@ def admin_view():
                     col3.metric("Jours", stats.get('nb_jours', 0))
                     
                     if conflicts:
-                        st.warning(f"{len(conflicts)} modules")
+                        st.warning(f"{len(conflicts)} modules non planifiés")
                         st.dataframe(pd.DataFrame(conflicts), use_container_width=True)
                 except Exception as e:
                     st.error(f" {str(e)}")
